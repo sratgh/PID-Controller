@@ -63,8 +63,19 @@ For me the integral term was not really necessary, to achieve good results, neve
 
 For the speed controller I choose quite similar values, except the Kd, since I do not want to have sharp de/accelerations.
 
+The final values for the steering PID, that I chose were:
+- K = 0.1, D = 1.5, I = 0.0001
 
+The final values for the speed PID that I chose were
+- - K = 0.1, D = 0.0, I = 0.001
 
+## Videos
+
+I uploaded 4 videos with the following hyperparameters for the steering PID:
+- Steering-PID: K = 0.5, D = 0.0, I = 0.0 | (Without Speed PID) --> Heavy oscillations of the car
+- Steering-PID: K = 0.125, D = 0.0, I = 0.0 | (Without Speed PID) --> Small, steady oscillations
+- Steering-PID: K = 0.1, D = 2.5, I = 0.0 | (Without Speed PID) --> Very aggresive turns because of high differential term
+- Steering-PID: K = 0.1, D = 1.5, I = 0.0001 | Speed PID: K = 0.1, D = 0.0, I = 0.001 --> Final solution, which is quite smooth, except for the last couple of sharp corners, where it could be optimized
 
 ## Dependencies
 
